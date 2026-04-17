@@ -1,6 +1,16 @@
 import SiteChrome from "../../components/SiteChrome";
 
-const footerColumns = [
+interface FooterItem {
+  label: string;
+  href?: string;
+}
+
+interface FooterColumn {
+  title: string;
+  items: FooterItem[];
+}
+
+const footerColumns: FooterColumn[] = [
   {
     title: "CRM Developer",
     items: [{ label: "Selected implementation stories and outcomes." }]
@@ -48,19 +58,43 @@ export default function ProjectsPage() {
         <article className="project-card">
           <p className="project-label">Project 02</p>
           <h2>CRM + Support Integration</h2>
-          <p>Connected customer support activity into CRM records to give teams a full relationship view.</p>
+          <p>
+            Connected a CRM platform with a support ticketing system, enabling real-time customer context for support
+            agents.
+          </p>
+          <ul className="project-tags">
+            <li>System Integration</li>
+            <li>API Development</li>
+            <li>Data Sync</li>
+          </ul>
         </article>
 
         <article className="project-card">
           <p className="project-label">Project 03</p>
-          <h2>Lifecycle Dashboard Suite</h2>
-          <p>Built custom dashboards for acquisition, conversion, retention, and service health reporting.</p>
+          <h2>Customer Data Architecture</h2>
+          <p>
+            Restructured customer data model to eliminate duplicates, improve segmentation accuracy, and enable
+            targeted marketing campaigns.
+          </p>
+          <ul className="project-tags">
+            <li>Data Modeling</li>
+            <li>ETL</li>
+            <li>Segmentation</li>
+          </ul>
         </article>
 
         <article className="project-card">
           <p className="project-label">Project 04</p>
-          <h2>Data Cleanup Framework</h2>
-          <p>Created validation and duplicate-control systems to improve reporting reliability and user trust.</p>
+          <h2>Team Adoption & Training</h2>
+          <p>
+            Led CRM training rollout for sales and support teams, designed workflows to match their processes, and
+            measured adoption metrics.
+          </p>
+          <ul className="project-tags">
+            <li>Change Management</li>
+            <li>Training</li>
+            <li>User Adoption</li>
+          </ul>
         </article>
       </section>
     </SiteChrome>

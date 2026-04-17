@@ -1,6 +1,16 @@
 import SiteChrome from "../../components/SiteChrome";
 
-const footerColumns = [
+interface FooterItem {
+  label: string;
+  href?: string;
+}
+
+interface FooterColumn {
+  title: string;
+  items: FooterItem[];
+}
+
+const footerColumns: FooterColumn[] = [
   {
     title: "CRM Developer",
     items: [{ label: "Focused on systems, automation, and growth." }]
@@ -48,29 +58,8 @@ export default function AboutPage() {
           </p>
           <p>
             Whether the goal is better lead conversion, cleaner reporting, or more reliable follow-up, I build systems
-            that are easy to maintain and ready to grow with the business.
+            that your team will actually use and trust.
           </p>
-        </div>
-      </section>
-
-      <section className="section reveal">
-        <div className="section-heading">
-          <p className="eyebrow">Skills & Tools</p>
-          <h2>Capabilities across the CRM development lifecycle.</h2>
-        </div>
-        <div className="card-grid">
-          <article className="info-card">
-            <h3>Platform Setup</h3>
-            <p>Custom fields, modules, permissions, records, and lifecycle mapping for clarity and scale.</p>
-          </article>
-          <article className="info-card">
-            <h3>Workflow Logic</h3>
-            <p>Triggers, automations, SLAs, reminders, and process rules that keep operations moving.</p>
-          </article>
-          <article className="info-card">
-            <h3>Analytics & Reporting</h3>
-            <p>Dashboards and decision-support reporting that expose trends, bottlenecks, and opportunities.</p>
-          </article>
         </div>
       </section>
     </SiteChrome>

@@ -1,6 +1,16 @@
 import SiteChrome from "../../components/SiteChrome";
 
-const footerColumns = [
+interface FooterItem {
+  label: string;
+  href?: string;
+}
+
+interface FooterColumn {
+  title: string;
+  items: FooterItem[];
+}
+
+const footerColumns: FooterColumn[] = [
   {
     title: "CRM Developer",
     items: [{ label: "Ready for personal branding and lead generation." }]
@@ -48,27 +58,16 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <form className="contact-form">
-          <label>
-            Name
-            <input type="text" placeholder="Your name" />
-          </label>
-          <label>
-            Email
-            <input type="email" placeholder="your@email.com" />
-          </label>
-          <label>
-            Project Type
-            <input type="text" placeholder="CRM automation, integration, setup..." />
-          </label>
-          <label>
-            Message
-            <textarea rows="5" placeholder="Tell me about your CRM goals" />
-          </label>
-          <button className="button button--primary" type="button">
-            Send Inquiry
-          </button>
-        </form>
+        <div className="contact-card">
+          <h2>Available For</h2>
+          <ul>
+            <li>CRM customization projects</li>
+            <li>Workflow and automation design</li>
+            <li>Data architecture consulting</li>
+            <li>Integration strategy</li>
+            <li>Full-cycle implementation</li>
+          </ul>
+        </div>
       </section>
     </SiteChrome>
   );
